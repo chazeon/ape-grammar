@@ -1,0 +1,77 @@
+{
+	"scopeName": "source.ape",
+	"patterns": [
+		{
+			"name": "comment.line.number-sign.ape",
+			"match": "#.*$"
+		},
+		{
+			"name": "keyword.control.ape",
+			"match": "\\b(Title|NuclearCharge|CalculationMode|Units|Verbose|Hamiltonian|WaveEquation|SpinMode|XCFunctionals|KEDFunctional|TheoryLevel|Xalpha|TB_c|Species|Orbitals|PPComponents|PPCalculationTolerance|PPOutputFileFormat|CoreCorrection|LLocal|PPTests|PPTestSCF|PPTestOrbitals|PPTestAEDir|LogDerivativeRadius|LogDerivativeEnergyMax|LogDerivativeEnergyMin|LogDerivativeEnergyStep|Mesh|MeshType|MeshStartingPoint|MeshOutmostPoint|MeshNumberOfPoints|MeshDerivMethod|MeshFiniteDiffOrder|SCF|MaximumIter|ConvAbsDens|ConvRelDens|ConvAbsEnergy|ConvRelEnergy|SmearingFunction|MixingScheme|Mixing|MixingSteps|Wave-equations solver|EigenSolverTolerance|ODEIntTolerance|ODESteppingFunction|ODEMaxSteps)\\b"
+		},
+		{
+			"name": "constant.numeric.ape",
+			"match": "\\b(\\d+\\.\\d+|\\d+)\\b"
+		},
+		{
+			"name": "variable.assignment.ape",
+			"match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*="
+		},
+		{
+			"name": "support.function.ape",
+			"match": "\\b(sqrt|exp|log|ln|log10|sin|cos|tan|cot|sec|csc|asin|acos|atan|acot|asec|acsc|sinh|cosh|tanh|coth|sech|csch|asinh|acosh|atanh|acoth|asech|acsch)\\b"
+		},
+		{
+			"name": "storage.type.ape",
+			"match": "\\b(integer|real|block data|flag|string|logical)\\b"
+		},
+		{
+			"name": "constant.language.ape",
+			"match": "\\b(true|false|t|f|yes|no|pi|e)\\b"
+		}
+	],
+	"repository": {
+		"block_data": {
+			"patterns": [
+				{
+					"name": "meta.block.ape",
+					"begin": "^%",
+					"end": "^%",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.other.block-start.ape"
+						}
+					},
+					"endCaptures": {
+						"0": {
+							"name": "keyword.other.block-end.ape"
+						}
+					},
+					"patterns": [
+						{
+							"name": "constant.character.separator.pipe.ape",
+							"match": "\\|"
+						},
+						{
+							"name": "variable.other.block-variable.ape",
+							"match": "\\b\\w+\\b"
+						},
+						{
+							"name": "constant.numeric.block-numbers.ape",
+							"match": "\\b\\d+(\\.\\d+)?\\b"
+						}
+					]
+				}
+			]
+		},
+		"line_comment": {
+			"name": "comment.line.number-sign.ape",
+			"match": "#.*$"
+		}
+	},
+	"fileTypes": [
+		"ape"
+	],
+	"name": "APE",
+	"uuid": "12345678-1234-1234-1234-123456789012"
+}

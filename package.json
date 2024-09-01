@@ -1,0 +1,25 @@
+{
+  "name": "ape-grammar",
+  "displayName": "ape-grammar",
+  "description": "Langurage support for Atomic Pseudopotential Engine (APE)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ape",
+      "aliases": ["APE", "ape"],
+      "extensions": ["ape"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ape",
+      "scopeName": "source.ape",
+      "path": "./syntaxes/ape.tmLanguage.json"
+    }]
+  }
+}
